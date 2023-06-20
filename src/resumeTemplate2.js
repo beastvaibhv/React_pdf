@@ -2,8 +2,8 @@ import React from 'react'
 
 const ResumeTemplate2 = () => {
   return (
-    <div className="flex justify-end  ">
-       <div className='w-5/12 lg:w-40% xl:w-40% shadow-md border-2 border-black p-2 m-2 font-serif'>
+    <div className=" ">
+       <div className='w-3/4 lg:w-40% xl:w-40% shadow-md border-2 border-black p-2 m-2 font-serif'>
 
         {/**Header Section -------------------------------------------------------------------------------------------------- */}
            <div className='flex flex-col items-center space-y-px'>

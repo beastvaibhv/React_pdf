@@ -6,17 +6,20 @@ import ResumeTemplate2 from './resumeTemplate2.js';
 
 
 
+
 function App() {
   return (
     <div className="App">
       
-      <div className=''>
+      <div className='flex flex-row'>
+        
+       
         <div>
+          <ResumeTemplate2/>
+        </div>
+        <div >
           <ResumePdf/>
         </div>
-       
-        
-        
         
       </div>  
       

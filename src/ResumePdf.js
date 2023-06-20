@@ -4,17 +4,37 @@ const styles = StyleSheet.create({
   page: {
     flexDirection: 'column',
     backgroundColor: '#ffffff',
-    padding: '40px',
-    fontSize: '12pt',
+    padding: '8px',
+    fontSize: '13pt',
     width: '100%',
     height: '100%',
+    fontFamily:'Times-Roman',
+    
   },
-  section: {
-    marginBottom: '20px',
+  Header: {
+    fontSize: '36pt',
+    fontWeight: '1000',
+    fontFamily:'Times-Bold',
+  },
+  headingsection: {
+    marginBottom: '5px',
+    textAlign: 'center'
   },
   sectionTitle: {
-    fontWeight: 'bold',
-    marginBottom: '10px',
+    fontWeight: '1000',
+    fontSize: '18pt',
+    marginBottom: '2px',
+    fontFamily:'Times-Bold',
+  },
+  flex:{
+
+  },
+  titles:{
+     fontWeight:"heavy",
+     fontFamily:'Times-Bold',
+  },
+  text: {
+    marginBottom:"5px"
   },
   linkItem: {
     marginBottom: '5px',
@@ -23,50 +43,74 @@ const styles = StyleSheet.create({
 
 const ResumePdf = () => {
   return (
-    <PDFViewer>
+    <div className='className ="w-5/12 lg:w-60% xl:w-60% shadow-md border-2 border-black p-2 m-2 font-serif"'>
+    <PDFViewer width ={580} height = {800}>
     <Document>
       <Page size="A4" style={styles.page}>
         {/* Name Section */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>John Doe</Text>
-          
+        <View style={styles.headingsection}>
+          <Text style={styles.Header}>John Doe</Text>
+          <Text>+91 912XXXXXXX Dehradun, India</Text>
+          <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View style={{ flex: 1 }}>
+            <Text>Email</Text>
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text>Github</Text>
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text>LinkedIn</Text>
+          </View>
+        </View>
         </View>
 
-        {/* Contact and Address Section */}
-        <View style={styles.section}>
+        {/* About Section */}
+        <View >
           <Text style={styles.sectionTitle}>About</Text>
-          <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non rem quo laudantium eos atque cupiditate iusto pariatur libero, quod, saepe error voluptas a? Sunt alias dicta magnam nam modi tempore deserunt dolor ratione reiciendis enim, voluptates aliquam dolorum, ducimus autem distinctio expedita, tenetur quaerat unde in odio temporibus! Repellendus, minima!</Text>
+          <Text style = {styles.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non rem quo laudantium eos atque cupiditate iusto pariatur libero, quod, saepe error voluptas a? Sunt alias dicta magnam nam modi tempore deserunt dolor ratione reiciendis enim, voluptates aliquam dolorum, ducimus autem distinctio expedita, tenetur quaerat unde in odio temporibus! Repellendus, minima!</Text>
           
         </View>
 
-        {/* Email Section */}
-        <View style={styles.section}>
+        {/* Experience Section*/}
+        < View>
           <Text style={styles.sectionTitle}>Experience</Text>
-          <View> <Text>ABC Company</Text></View>
-          <View><Text>XYZ Company</Text></View>
-          <Text style={styles.linkItem}>Email: john.doe@example.com</Text>
+
+          <Text style ={styles.titles}>Frontend Developer</Text><Text></Text>
+          <Text></Text> <Text></Text>
+          <Text></Text>
+          <Text style ={styles.titles}>Research Intern</Text> <Text></Text>
+          <Text></Text> <Text></Text>
+          <Text></Text>
+          <Text style={styles.linkItem}></Text>
         </View>
 
-        {/* GitHub Section */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>GitHub</Text>
-          <Text style={styles.linkItem}>GitHub: github.com/johndoe</Text>
+        {/* Project Section */}
+        <View >
+          <Text style={styles.sectionTitle}>Projects</Text>
+          <Text style={styles.titles}>Project 1</Text>
+          <Text>Technology Used</Text>
+          <Text></Text>
+          <Text style={styles.titles}>Project 2</Text>
+          <Text>Technology Used</Text>
+          <Text></Text>
         </View>
 
-        {/* LinkedIn Section */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>LinkedIn</Text>
-          <Text style={styles.linkItem}>LinkedIn: linkedin.com/in/johndoe</Text>
+        {/* Education Section */}
+        <View >
+          <Text style={styles.sectionTitle}>Education</Text>
+          <Text style ={styles.titles}>XYZ college</Text><Text></Text>
+          <Text style ={styles.titles}>ABC School</Text><Text></Text>
         </View>
 
-        {/* Additional Information Section */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Additional Information</Text>
+        {/* Awards Section */}
+        <View >
+          <Text style={styles.sectionTitle}>Awards and Achievements</Text>
           <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
         </View>
       </Page>
     </Document>
     </PDFViewer>
+    </div>
   );
 };
 export default ResumePdf
